@@ -1,0 +1,22 @@
+{
+	"login":{
+		"userNameId":"username",
+		"pwdId":"password",
+		"refreshPicturesBtnXPath":"//*[@id='loginForm']/div/ul[2]/li[4]/div/div/div[1]"
+	},
+	"index":{
+		"bookingBtnId":"selectYuding",
+
+	},
+	"leftTickes":{
+		"fromStationTextId":"fromStationText",
+		"exactFromStationItemId":"citem_0",
+		"toStationTextId":"toStationText",
+		"exactToStationItemId":"citem_0",
+		"ticketXPathTemplate":"//*[@id='{0}']/td[13]/a",
+		"refeshPageBtnId":"query_ticket"
+	},
+	"confirmPassenger":{
+		"submitOrderId":"submitOrder_id"
+	}
+}
