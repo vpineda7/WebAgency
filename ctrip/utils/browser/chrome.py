@@ -4,10 +4,15 @@ from splinter import Browser
 
 class Chrome:
     def __init__(self):
-        with open('config\\browser.json') as envConfigFile:
-            envConfig = json.load(envConfigFile)
-            executable_path = {'executable_path':envConfig['browser']['chromedriver']}
-            self.browser = Browser('chrome', **executable_path)
+        envConfig = json.loads(open('config\\browser.json').read())
+        executable_path = {'executable_path': envConfig["browser"]["chromedriver"]}
+        self.browser = Browser('chrome', **executable_path)
 
-    def open(self, pageUrl):
-        self.browser.visit(pageUrl)
+    def Open(self, Url):
+        self.browser.visit(Url)
+
+    def Fill(self, xpath, value):
+    	self.browser.find_by_xpath(xpath).fill(value)
+
+    def Click(self, xpath):
+    	self.browser.find_by_xpath(xpath).click()

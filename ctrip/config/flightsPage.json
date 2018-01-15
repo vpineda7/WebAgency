@@ -1,0 +1,8 @@
+{
+	"URL": "http://flights.ctrip.com/",	
+	"SearchForm": "//*[@id='J_filghtSearch']/div[1]",
+	"FromCity": "//*[@id='DepartCity1TextBox']",
+	"ToCity": "//*[@id='ArriveCity1TextBox']",
+	"DepartureDate": "//*[@id='DepartDate1TextBox']",
+	"SearchFlight": "//*[@id='search_btn']"
+}
