@@ -1,5 +1,6 @@
 import json
 import os
+import time
 from splinter import Browser
 
 class Chrome:
@@ -8,7 +9,7 @@ class Chrome:
         executable_path = {'executable_path': envConfig["browser"]["chromedriver"]}
         self.browser = Browser('chrome', **executable_path)
 
-    def Open(self, Url):
+    def OpenWith(self, Url):
         self.browser.visit(Url)
 
     def Fill(self, xpath, value):
@@ -16,3 +17,10 @@ class Chrome:
 
     def Click(self, xpath):
     	self.browser.find_by_xpath(xpath).click()
+
+    def Screenshot(self, name):
+        self.browser.screenshot(name)
+
+    def WaitUtilVisible(self, xpath, interval=1):
+        while self.browser.find_by_xpath(xpath).visible == False:
+            time.sleep(interval)        

@@ -1,0 +1,7 @@
+{
+	"MonthlyLowPricesBtn": "//*[@id='lowestPriceLink']",
+
+	"MonthlyLowPricesDialog": "//*[@id='LowestPriceDialog']",
+
+	"LowPricesDialogData": "//*[@id='LowestPriceDialog']/div[2]/div/div[1]/a"
+}
